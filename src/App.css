@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+.ai___robot-emojis {
+	display: flex;
+	justify-content: center;
+	font-size: 24px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ai___emoji-fade-in {
+	opacity: 0;
+	display: inline-block;
+	animation-name: fade-in;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+.MuiContainer-root {
+	padding: 0 !important;
+	margin: 1rem;
+}
+.MuiOutlinedInput-notchedOutline {
+	border: solid 2px #bd5532 !important;
+}
+.home {
+	width: 65% !important;
+}
+.mode-selection___container {
+	width: 50% !important;
+	min-width: 300px;
+	max-width: 425px;
+}
+.player___container {
+	display: flex;
+	flex-direction: column;
+	min-width: 300px !important;
+	max-width: 500px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.end-game___game-over {
+	animation: blink 3s ease 1s infinite normal forwards;
+	text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.end-game___winner-text {
+	color: #8b2c0d;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 600px) {
+	.home {
+		width: 85% !important;
+	}
+
+	h1,
+	button {
+		font-size: 2rem;
+	}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (min-width: 600px) {
+	.home {
+		width: 85% !important;
+	}
+
+	h1,
+	button {
+		font-size: 2.5rem;
+	}
+
+	.mode-selection___container {
+		width: 95% !important;
+	}
+	.player___container {
+		width: 80% !important;
+	}
+}
+
+@media (max-width: 480px) {
+	.home {
+		width: 95% !important;
+	}
+
+	.mode-selection___container {
+		width: 95% !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.mode-selection___container {
+		max-width: 50% !important;
+	}
+}
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes blink {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
 }
